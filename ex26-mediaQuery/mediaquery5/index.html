@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
     <link rel="stylesheet" href="styles/style.css">
-    <!--<link rel="stylesheet" href="styles/pc.css">-->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/media-query.css">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>My Website</h1>
         <span id="burger" class="material-symbols-outlined" onclick="clickNav()">menu</span>
@@ -29,17 +29,26 @@
             <h2>Test Media Queries</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nemo nobis temporibus fugiat est adipisci molestiae corrupti porro necessitatibus minus! Corporis libero fugit, quaerat odio eos dicta voluptatem aspernatur facere. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam doloribus distinctio, corporis itaque reiciendis veritatis nihil deserunt ad nesciunt tempore molestiae est tempora illo perspiciatis. Voluptas obcaecati magnam veniam exercitationem.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt a aut quos culpa reprehenderit consequatur, possimus explicabo voluptate ab, quas libero vitae eaque enim unde, minus quod dignissimos aperiam itaque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui quaerat quisquam eveniet animi cum quos? Earum, doloremque incidunt ex esse placeat temporibus molestiae laborum atque quod veniam culpa, accusantium iste!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ea sunt id a provident excepturi fugit dolores atque, voluptatibus debitis fuga asperiores dignissimos vitae non alias doloribus eum quia ab. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore ad hic ea culpa, eveniet odit eum quae, consequatur deleniti accusamus suscipit? Vel, earum alias distinctio tenetur temporibus dolor accusamus nisi.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ea sunt id a provident excepturi fugit dolores atque, voluptatibus debitis fuga asperiores dignissimos vitae non alias doloribus eum quia ab. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore ad hic ea culpa, eveniet odit eum quae, consequatur deleniti accusamus suscipit? Vel, earum alias distinctio tenetur temporibus dolor accusamus nisi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita ea officia, necessitatibus nulla voluptatem ratione consequuntur velit? Odio odit reprehenderit maxime dignissimos porro, distinctio, nihil consequatur molestias ea voluptatibus vitae?</p>
         </section>
     </main>
     <script>
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+
         function clickNav(){
             if (itens.style.display == 'block') {
                 itens.style.display = 'none'
             } else {
                 itens.style.display = 'block'
             }
-        }
+        } 
     </script>
 </body>
 </html>
